@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function validateForm(event) {
+            event.preventDefault();
+            var x = document.forms["myForm"]["fname"].value;
+            if (x === "") {
+                alert("Nme must be filled out");
+                return false;
+            } else document.write("Name submitted");
+
+        }
+    </script>
+</head>
+
+<body>
+    <form name="myForm" onsubmit="return validateForm(event)">
+        Name: <input type="text" name="fname" placeholder="Enter your name">
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>
